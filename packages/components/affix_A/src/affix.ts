@@ -12,7 +12,7 @@ import type Affix from './affix.vue'
 export const affixProps = buildProps({
   /**
    * @description affix element zIndex value
-   */
+   * */
   zIndex: {
     type: definePropType<ZIndexProperty>([Number, String]),
     default: 100,
@@ -26,14 +26,14 @@ export const affixProps = buildProps({
   },
   /**
    * @description offset distance
-   */
+   * */
   offset: {
     type: Number,
     default: 0,
   },
   /**
    * @description position of affix
-   */
+   * */
   position: {
     type: String,
     values: ['top', 'bottom'],

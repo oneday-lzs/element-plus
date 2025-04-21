@@ -118,10 +118,10 @@ watch(fixed, (val) => emit(CHANGE_EVENT, val))
 
 onMounted(() => {
   if (props.target) {
-    target.value = document.querySelector<HTMLElment>(props.target) ?? undefined
-    if (!target.value) {
-      throwError(COMPOENT_NAME, `Target does not exist: ${props.target}`)
-    }
+    target.value =
+      document.querySelector<HTMLElement>(props.target) ?? undefined
+    if (!target.value)
+      throwError(COMPONENT_NAME, `Target does not exist: ${props.target}`)
   } else {
     target.value = document.documentElement
   }
