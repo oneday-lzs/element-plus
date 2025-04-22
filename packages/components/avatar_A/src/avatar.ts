@@ -27,7 +27,7 @@ export const avatarProps = buildProps({
     default: 'circle',
   },
   /**
-   * @description representation type to icon, more info on component.
+   * @description representation type to icon, more info on icon component.
    */
   icon: {
     type: iconPropType,
