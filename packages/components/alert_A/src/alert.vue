@@ -1,11 +1,14 @@
 <template>
-  <transition :name="ns.b('fede')">
+  <transition :name="ns.b('fade')">
     <div
       v-show="visible"
       :class="[ns.b(), ns.m(type), ns.is('center', center), ns.is(effect)]"
       role="alert"
     >
-      <el-icon v-if="showIcon && ($slots.icon || iconComponent)">
+      <el-icon
+        v-if="showIcon && ($slots.icon || iconComponent)"
+        :class="[ns.e('icon'), { [ns.is('big')]: hasDesc }]"
+      >
         <slot name="icon">
           <component :is="iconComponent" />
         </slot>
@@ -40,7 +43,7 @@
   </transition>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed, ref, useSlots } from 'vue'
 import { ElIcon } from '@element-plus/components/icon'
 import { TypeComponents, TypeComponentsMap } from '@element-plus/utils'
